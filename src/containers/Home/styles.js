@@ -1,4 +1,13 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const scale = keyframes`
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+`
 
 export const Background = styled.div`
     background-image: url(${ props => props.img});
@@ -8,6 +17,7 @@ export const Background = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
     &::before{
         content: '';
@@ -18,6 +28,10 @@ export const Background = styled.div`
         height: 100%;
 
         background-color: rgba(0,0,0, 0.5);
+    }
+
+    img{
+        animation: ${scale} 0.5s linear;
     }
 `
 
