@@ -67,3 +67,23 @@ export async function getMovieById(movieId){
 
     return data
 }
+
+/**MOVIES */
+export async function getUpcomingMovie(){
+    const { 
+        data: { results } 
+    } = await api.get('/movie/upcoming')
+
+    return results
+}
+
+
+/**SERIES */
+
+export async function getSeries(){
+    const { 
+        data: { results } 
+    } = await api.get('/tv/popular')
+
+    return results[0]
+}
