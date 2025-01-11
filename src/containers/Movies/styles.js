@@ -32,6 +32,16 @@ export const Background = styled.div`
 
     img{
         animation: ${scale} 0.5s linear;
+        transition: all 0.5s ease-in-out;
+
+        cursor: pointer;
+
+        &:hover{
+            border-bottom: 2px solid rgba(197, 197, 197, 0.5);
+            box-shadow: 0 16px 32px rgba(197, 197, 197, 0.5);
+            transform: perspective(300px) rotate3d(0, -1, 0, 5deg) scale(1.2);
+            transition: all 0.5s ease-in-out;
+        }
     }
 `
 

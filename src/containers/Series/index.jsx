@@ -32,7 +32,7 @@ function Series(){
             ])
             //resultados da chamada, retorna um array, onde cada posição contém as informações da chamada.
             .then(([serie, topSeries, popularSeries]) => {
-                console.log({serie});   
+                //console.log({serie});   
                 setSerie(serie)
                 setTopSeries(topSeries)
                 setPopularSeries(popularSeries)
@@ -50,14 +50,14 @@ function Series(){
         <>
         { serie && (
         <Background img={getImages(serie.backdrop_path)}>
-            {showModal && <ModalSeries movieId={serie.id} setShowModal={setShowModal}/>}
+            {showModal && <ModalSeries serieId={serie.id} setShowModal={setShowModal}/>}
             <Container>
                 <Info>
                     <h1>{serie.name}</h1>
                     <p>{serie.overview}</p>
 
                     <ContainerButtons>
-                        <Button onClick={() => navigate(`/detalhe/${serie.id}`)} red={true}>Watch Now</Button>
+                        <Button onClick={() => navigate(`/detailSeries/${serie.id}`)} red={true}>Watch Now</Button>
                         <Button onClick={() => setShowModal(true)} red={false}>Watch Trailer</Button>
                     </ContainerButtons>
                 </Info>

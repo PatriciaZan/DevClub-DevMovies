@@ -87,3 +87,31 @@ export async function getSeries(){
 
     return results[0]
 }
+
+export async function getSerieById(serieId){
+    const data = await api.get(`/tv/${serieId}`)
+
+    return data
+}
+
+export async function getSeriesVideos(serieId){
+    const { 
+        data: { results } 
+    } = await api.get(`/tv/${serieId}/videos`)
+
+    return results // [0]
+}
+
+export async function getSerieSimilar(serieId){
+    const { 
+        data: { results } 
+    } = await api.get(`/tv/${serieId}/similar`)
+
+    return results
+}
+
+export async function getSerieCredits(serieId){
+    const { data: { cast } } = await api.get(`/tv/${serieId}/credits`)
+
+    return cast
+}

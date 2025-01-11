@@ -20,6 +20,7 @@ function Home(){
     const [topPeople, setTopPeople] = useState()
     const navigate = useNavigate()
 
+
     useEffect( () => {
         
         async function getAllData(){

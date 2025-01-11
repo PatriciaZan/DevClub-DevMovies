@@ -6,8 +6,11 @@ import Card from "../Card";
 
 
 function Slider({ info, title}){
-    //console.log(info, title);
-    
+    console.log(info, title);
+     
+    //info[0].name ? console.log('infooo') : console.log(info[0].id);
+    //info ? console.log('V') : console.log('F'); 
+     
 
     return (
         <Container>
@@ -16,11 +19,11 @@ function Slider({ info, title}){
                 grabCursor
                 spaceBetween={10}
                 slidesPerView={'auto'}
-                className="swiper"
+                className="swiper"        
             >
                 {info.map((item, index) => (
                     <SwiperSlide key={index}>
-                        <Card item={item}/>
+                        <Card item={item} />
                     </SwiperSlide>
                 ))}
             </Swiper>
