@@ -13,5 +13,3 @@ function DefaultLayout(){
 }
 
 export default DefaultLayout
-
-//2a51b144b0d9fcbeadf79af09bd3e1f2
