@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Logo from '../../assets/logo.png'
 import { Container, Menu, Li } from './styles'
 import { Link, useLocation } from 'react-router-dom'
@@ -8,20 +8,24 @@ function Header(){
     const { pathname } = useLocation()
     //console.log(pathname);
 
+    /* Not working
     window.onscroll = () => {
-        //console.log(window.scrollY);
-        if(!changeBackground && window.scrollY > 150){
-            setChangeBackground(true)
-        }
-
-        if(changeBackground && window.screenY <= 150){
+        console.log(window.scrollY);
+        if(!changeBackground && window.scrollY > 200){
+           return setChangeBackground(true)
+        }else{
             setChangeBackground(false)
         }
-    }
+        // if(changeBackground && window.screenY <= 200){
+        //     setChangeBackground(false)
+        // }
+    }*/
+
 
 
     return(
-        <Container changeBackground={changeBackground}>
+        // <Container changeBackground={changeBackground}>
+        <Container>
                 <img src={Logo} alt="logo do devMovies" />
             <Menu>
                 <Li isActive={pathname === '/'}>
