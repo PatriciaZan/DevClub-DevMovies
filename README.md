@@ -1,8 +1,11 @@
-# React + Vite
+# DevMovies
+[Visite o projeto aqui](https://devmovies-project.netlify.app/).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma Página que mostra o filme e serie do momento como página principal.
+Utilizando uma API, além de ter opções de assistir trailers, ver sobre o filme e navegar em catálagos.
 
-Currently, two official plugins are available:
+The main Page
+![Main Page](./prints/mainPage.png)
+  
+Projeto realizado no curso de Front End da DevClub utilizando React.js e styledComponents.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
